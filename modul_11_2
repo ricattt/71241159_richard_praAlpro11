@@ -1,0 +1,15 @@
+data = []
+
+while True:
+    nilai = input("Masukkan bilangan: ")
+    if nilai == "done":
+        if data:
+            jum = sum(data)
+            avg = jum / len(data)
+            print("Rata-rata:", avg)
+        else:
+            print("Tidak ada data.")
+        break
+    else:
+        angka = float(nilai)
+        data.append(angka)
