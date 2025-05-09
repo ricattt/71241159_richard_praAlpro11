@@ -1,0 +1,17 @@
+nama_file = input("Masukkan nama file teks: ")
+
+file = open(nama_file, 'r')
+isi = file.read()
+file.close()
+
+for karakter in ",.!?;:-()\"'":
+    isi = isi.replace(karakter, "")
+isi = isi.lower()
+
+kata_list = isi.split()
+
+kata_unik = set(kata_list)
+
+print("Kata-kata unik dalam artikel:")
+for kata in sorted(kata_unik):
+    print(kata)
